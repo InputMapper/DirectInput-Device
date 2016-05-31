@@ -91,7 +91,7 @@ namespace DirectInput_Device
             {
                 PropertyInfo propertyS = deviceWrapper.GetType().GetProperty(property.Name);
                 var value = property.GetValue(deviceWrapper, null);
-                this.InputChannels.Add(value as InputChannel);
+                this.Channels.Add(value as DeviceChannel);
             }
 
             poolingThread = new Thread(ListenerThread);
@@ -211,155 +211,155 @@ namespace DirectInput_Device
     }
     internal class DIdevice
     {
-        public InputChannelTypes.JoyAxis ax { get; }
-        public InputChannelTypes.JoyAxis ay { get; }
-        public InputChannelTypes.JoyAxis az { get; }
+        public JoyAxis ax { get; }
+        public JoyAxis ay { get; }
+        public JoyAxis az { get; }
 
-        public InputChannelTypes.JoyAxis aax { get; }
-        public InputChannelTypes.JoyAxis aay { get; }
-        public InputChannelTypes.JoyAxis aaz { get; }
+        public JoyAxis aax { get; }
+        public JoyAxis aay { get; }
+        public JoyAxis aaz { get; }
 
-        public InputChannelTypes.JoyAxis avx { get; }
-        public InputChannelTypes.JoyAxis avy { get; }
-        public InputChannelTypes.JoyAxis avz { get; }
+        public JoyAxis avx { get; }
+        public JoyAxis avy { get; }
+        public JoyAxis avz { get; }
 
-        public InputChannelTypes.JoyAxis fx { get; }
-        public InputChannelTypes.JoyAxis fy { get; }
-        public InputChannelTypes.JoyAxis fz { get; }
+        public JoyAxis fx { get; }
+        public JoyAxis fy { get; }
+        public JoyAxis fz { get; }
 
-        public InputChannelTypes.JoyAxis rx { get; }
-        public InputChannelTypes.JoyAxis ry { get; }
-        public InputChannelTypes.JoyAxis rz { get; }
+        public JoyAxis rx { get; }
+        public JoyAxis ry { get; }
+        public JoyAxis rz { get; }
 
-        public InputChannelTypes.JoyAxis tx { get; }
-        public InputChannelTypes.JoyAxis ty { get; }
-        public InputChannelTypes.JoyAxis tz { get; }
+        public JoyAxis tx { get; }
+        public JoyAxis ty { get; }
+        public JoyAxis tz { get; }
 
-        public InputChannelTypes.JoyAxis vx { get; }
-        public InputChannelTypes.JoyAxis vy { get; }
-        public InputChannelTypes.JoyAxis vz { get; }
+        public JoyAxis vx { get; }
+        public JoyAxis vy { get; }
+        public JoyAxis vz { get; }
 
-        public InputChannelTypes.JoyAxis x { get; }
-        public InputChannelTypes.JoyAxis y { get; }
-        public InputChannelTypes.JoyAxis z { get; }
+        public JoyAxis x { get; }
+        public JoyAxis y { get; }
+        public JoyAxis z { get; }
 
-        public InputChannelTypes.JoyAxis Slider1 { get; }
-        public InputChannelTypes.JoyAxis Slider2 { get; }
-        public InputChannelTypes.JoyAxis Slider3 { get; }
-        public InputChannelTypes.JoyAxis Slider4 { get; }
-        public InputChannelTypes.JoyAxis Slider5 { get; }
-        public InputChannelTypes.JoyAxis Slider6 { get; }
-        public InputChannelTypes.JoyAxis Slider7 { get; }
-        public InputChannelTypes.JoyAxis Slider8 { get; }
-        public InputChannelTypes.JoyAxis Slider9 { get; }
-        public InputChannelTypes.JoyAxis Slider10 { get; }
+        public JoyAxis Slider1 { get; }
+        public JoyAxis Slider2 { get; }
+        public JoyAxis Slider3 { get; }
+        public JoyAxis Slider4 { get; }
+        public JoyAxis Slider5 { get; }
+        public JoyAxis Slider6 { get; }
+        public JoyAxis Slider7 { get; }
+        public JoyAxis Slider8 { get; }
+        public JoyAxis Slider9 { get; }
+        public JoyAxis Slider10 { get; }
 
-        public InputChannelTypes.Button b1 { get; }
-        public InputChannelTypes.Button b2 { get; }
-        public InputChannelTypes.Button b3 { get; }
-        public InputChannelTypes.Button b4 { get; }
-        public InputChannelTypes.Button b5 { get; }
-        public InputChannelTypes.Button b6 { get; }
-        public InputChannelTypes.Button b7 { get; }
-        public InputChannelTypes.Button b8 { get; }
-        public InputChannelTypes.Button b9 { get; }
-        public InputChannelTypes.Button b10 { get; }
-        public InputChannelTypes.Button b11 { get; }
-        public InputChannelTypes.Button b12 { get; }
-        public InputChannelTypes.Button b13 { get; }
-        public InputChannelTypes.Button b14 { get; }
-        public InputChannelTypes.Button b15 { get; }
-        public InputChannelTypes.Button b16 { get; }
-        public InputChannelTypes.Button b17 { get; }
-        public InputChannelTypes.Button b18 { get; }
-        public InputChannelTypes.Button b19 { get; }
-        public InputChannelTypes.Button b20 { get; }
+        public Button b1 { get; }
+        public Button b2 { get; }
+        public Button b3 { get; }
+        public Button b4 { get; }
+        public Button b5 { get; }
+        public Button b6 { get; }
+        public Button b7 { get; }
+        public Button b8 { get; }
+        public Button b9 { get; }
+        public Button b10 { get; }
+        public Button b11 { get; }
+        public Button b12 { get; }
+        public Button b13 { get; }
+        public Button b14 { get; }
+        public Button b15 { get; }
+        public Button b16 { get; }
+        public Button b17 { get; }
+        public Button b18 { get; }
+        public Button b19 { get; }
+        public Button b20 { get; }
 
-        public InputChannelTypes.Button pov1up { get; }
-        public InputChannelTypes.Button pov1down { get; }
-        public InputChannelTypes.Button pov1left { get; }
-        public InputChannelTypes.Button pov1right { get; }
+        public Button pov1up { get; }
+        public Button pov1down { get; }
+        public Button pov1left { get; }
+        public Button pov1right { get; }
 
-        public InputChannelTypes.Button pov2up { get; }
-        public InputChannelTypes.Button pov2down { get; }
-        public InputChannelTypes.Button pov2left { get; }
-        public InputChannelTypes.Button pov2right { get; }
+        public Button pov2up { get; }
+        public Button pov2down { get; }
+        public Button pov2left { get; }
+        public Button pov2right { get; }
 
         public DIdevice()
         {
-            ax = new InputChannelTypes.JoyAxis("Acceleration X");
-            ay = new InputChannelTypes.JoyAxis("Acceleration Y");
-            az = new InputChannelTypes.JoyAxis("Acceleration Z");
+            ax = new JoyAxis("Acceleration X", DataFlowDirection.Input);
+            ay = new JoyAxis("Acceleration Y", DataFlowDirection.Input);
+            az = new JoyAxis("Acceleration Z", DataFlowDirection.Input);
 
-            aax = new InputChannelTypes.JoyAxis("Angular Acceleration X");
-            aay = new InputChannelTypes.JoyAxis("Angular Acceleration Y");
-            aaz = new InputChannelTypes.JoyAxis("Angular Acceleration Z");
+            aax = new JoyAxis("Angular Acceleration X", DataFlowDirection.Input);
+            aay = new JoyAxis("Angular Acceleration Y", DataFlowDirection.Input);
+            aaz = new JoyAxis("Angular Acceleration Z", DataFlowDirection.Input);
 
-            avx = new InputChannelTypes.JoyAxis("Angular Velocity X");
-            avy = new InputChannelTypes.JoyAxis("Angular Velocity Y");
-            avz = new InputChannelTypes.JoyAxis("Angular Velocity Z");
+            avx = new JoyAxis("Angular Velocity X", DataFlowDirection.Input);
+            avy = new JoyAxis("Angular Velocity Y", DataFlowDirection.Input);
+            avz = new JoyAxis("Angular Velocity Z", DataFlowDirection.Input);
 
-            fx = new InputChannelTypes.JoyAxis("Force X");
-            fy = new InputChannelTypes.JoyAxis("Force Y");
-            fz = new InputChannelTypes.JoyAxis("Force Z");
+            fx = new JoyAxis("Force X", DataFlowDirection.Input);
+            fy = new JoyAxis("Force Y", DataFlowDirection.Input);
+            fz = new JoyAxis("Force Z", DataFlowDirection.Input);
 
-            rx = new InputChannelTypes.JoyAxis("Rotation X");
-            ry = new InputChannelTypes.JoyAxis("Rotation Y");
-            rz = new InputChannelTypes.JoyAxis("Rotation Z");
+            rx = new JoyAxis("Rotation X", DataFlowDirection.Input);
+            ry = new JoyAxis("Rotation Y", DataFlowDirection.Input);
+            rz = new JoyAxis("Rotation Z", DataFlowDirection.Input);
 
-            vx = new InputChannelTypes.JoyAxis("Velocity X");
-            vy = new InputChannelTypes.JoyAxis("Velocity Y");
-            vz = new InputChannelTypes.JoyAxis("Velocity Z");
+            vx = new JoyAxis("Velocity X", DataFlowDirection.Input);
+            vy = new JoyAxis("Velocity Y", DataFlowDirection.Input);
+            vz = new JoyAxis("Velocity Z", DataFlowDirection.Input);
 
-            tx = new InputChannelTypes.JoyAxis("Torque X");
-            ty = new InputChannelTypes.JoyAxis("Torque Y");
-            tz = new InputChannelTypes.JoyAxis("Torque Z");
+            tx = new JoyAxis("Torque X", DataFlowDirection.Input);
+            ty = new JoyAxis("Torque Y", DataFlowDirection.Input);
+            tz = new JoyAxis("Torque Z", DataFlowDirection.Input);
 
-            x = new InputChannelTypes.JoyAxis("X");
-            y = new InputChannelTypes.JoyAxis("Y");
-            z = new InputChannelTypes.JoyAxis("Z");
+            x = new JoyAxis("X", DataFlowDirection.Input);
+            y = new JoyAxis("Y", DataFlowDirection.Input);
+            z = new JoyAxis("Z", DataFlowDirection.Input);
 
-            Slider1 = new InputChannelTypes.JoyAxis("Slider 1");
-            Slider2 = new InputChannelTypes.JoyAxis("Slider 2");
-            Slider3 = new InputChannelTypes.JoyAxis("Slider 3");
-            Slider4 = new InputChannelTypes.JoyAxis("Slider 4");
-            Slider5 = new InputChannelTypes.JoyAxis("Slider 5");
-            Slider6 = new InputChannelTypes.JoyAxis("Slider 6");
-            Slider7 = new InputChannelTypes.JoyAxis("Slider 7");
-            Slider8 = new InputChannelTypes.JoyAxis("Slider 8");
-            Slider9 = new InputChannelTypes.JoyAxis("Slider 9");
-            Slider10 = new InputChannelTypes.JoyAxis("Slider 10");
+            Slider1 = new JoyAxis("Slider 1", DataFlowDirection.Input);
+            Slider2 = new JoyAxis("Slider 2", DataFlowDirection.Input);
+            Slider3 = new JoyAxis("Slider 3", DataFlowDirection.Input);
+            Slider4 = new JoyAxis("Slider 4", DataFlowDirection.Input);
+            Slider5 = new JoyAxis("Slider 5", DataFlowDirection.Input);
+            Slider6 = new JoyAxis("Slider 6", DataFlowDirection.Input);
+            Slider7 = new JoyAxis("Slider 7", DataFlowDirection.Input);
+            Slider8 = new JoyAxis("Slider 8", DataFlowDirection.Input);
+            Slider9 = new JoyAxis("Slider 9", DataFlowDirection.Input);
+            Slider10 = new JoyAxis("Slider 10", DataFlowDirection.Input);
 
-            b1 = new InputChannelTypes.Button("Button 1");
-            b2 = new InputChannelTypes.Button("Button 2");
-            b3 = new InputChannelTypes.Button("Button 3");
-            b4 = new InputChannelTypes.Button("Button 4");
-            b5 = new InputChannelTypes.Button("Button 5");
-            b6 = new InputChannelTypes.Button("Button 6");
-            b7 = new InputChannelTypes.Button("Button 7");
-            b8 = new InputChannelTypes.Button("Button 8");
-            b9 = new InputChannelTypes.Button("Button 9");
-            b10 = new InputChannelTypes.Button("Button 10");
-            b11 = new InputChannelTypes.Button("Button 11");
-            b12 = new InputChannelTypes.Button("Button 12");
-            b13 = new InputChannelTypes.Button("Button 13");
-            b14 = new InputChannelTypes.Button("Button 14");
-            b15 = new InputChannelTypes.Button("Button 15");
-            b16 = new InputChannelTypes.Button("Button 16");
-            b17 = new InputChannelTypes.Button("Button 17");
-            b18 = new InputChannelTypes.Button("Button 18");
-            b19 = new InputChannelTypes.Button("Button 19");
-            b20 = new InputChannelTypes.Button("Button 20");
+            b1 = new Button("Button 1", DataFlowDirection.Input);
+            b2 = new Button("Button 2", DataFlowDirection.Input);
+            b3 = new Button("Button 3", DataFlowDirection.Input);
+            b4 = new Button("Button 4", DataFlowDirection.Input);
+            b5 = new Button("Button 5", DataFlowDirection.Input);
+            b6 = new Button("Button 6", DataFlowDirection.Input);
+            b7 = new Button("Button 7", DataFlowDirection.Input);
+            b8 = new Button("Button 8", DataFlowDirection.Input);
+            b9 = new Button("Button 9", DataFlowDirection.Input);
+            b10 = new Button("Button 10", DataFlowDirection.Input);
+            b11 = new Button("Button 11", DataFlowDirection.Input);
+            b12 = new Button("Button 12", DataFlowDirection.Input);
+            b13 = new Button("Button 13", DataFlowDirection.Input);
+            b14 = new Button("Button 14", DataFlowDirection.Input);
+            b15 = new Button("Button 15", DataFlowDirection.Input);
+            b16 = new Button("Button 16", DataFlowDirection.Input);
+            b17 = new Button("Button 17", DataFlowDirection.Input);
+            b18 = new Button("Button 18", DataFlowDirection.Input);
+            b19 = new Button("Button 19", DataFlowDirection.Input);
+            b20 = new Button("Button 20", DataFlowDirection.Input);
 
-            pov1up = new InputChannelTypes.Button("POV 1 Up");
-            pov1down = new InputChannelTypes.Button("POV 1 Down");
-            pov1left = new InputChannelTypes.Button("POV 1 Left");
-            pov1right = new InputChannelTypes.Button("POV 1 Right");
+            pov1up = new Button("POV 1 Up", DataFlowDirection.Input);
+            pov1down = new Button("POV 1 Down", DataFlowDirection.Input);
+            pov1left = new Button("POV 1 Left", DataFlowDirection.Input);
+            pov1right = new Button("POV 1 Right", DataFlowDirection.Input);
 
-            pov2up = new InputChannelTypes.Button("POV 2 Up");
-            pov2down = new InputChannelTypes.Button("POV 2 Down");
-            pov2left = new InputChannelTypes.Button("POV 2 Left");
-            pov2right = new InputChannelTypes.Button("POV 2 Right");
+            pov2up = new Button("POV 2 Up", DataFlowDirection.Input);
+            pov2down = new Button("POV 2 Down", DataFlowDirection.Input);
+            pov2left = new Button("POV 2 Left", DataFlowDirection.Input);
+            pov2right = new Button("POV 2 Right", DataFlowDirection.Input);
         }
 
     }
