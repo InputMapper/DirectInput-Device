@@ -77,7 +77,7 @@ namespace DirectInput_Device
             this.deviceWrapper = new DIdevice();
             gamepad = new SlimDX.DirectInput.Joystick(directInput, device.InstanceGuid);
 
-            this.DeviceName = gamepad.Information.ProductName;
+            this.DeviceName = gamepad.Information.ProductName + "("+ device.InstanceGuid + ")";
             gamepad.Acquire();
 
 
