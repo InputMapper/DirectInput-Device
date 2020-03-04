@@ -177,23 +177,23 @@ namespace DirectInput_Device
                 if (sliders.Count() > 0)
                     deviceWrapper.Slider1.Value = sliders[0] / 65535f;
                 if (sliders.Count() > 1)
-                    deviceWrapper.Slider1.Value = sliders[1] / 65535f;
+                    deviceWrapper.Slider2.Value = sliders[1] / 65535f;
                 if (sliders.Count() > 2)
-                    deviceWrapper.Slider1.Value = sliders[2] / 65535f;
+                    deviceWrapper.Slider3.Value = sliders[2] / 65535f;
                 if (sliders.Count() > 3)
-                    deviceWrapper.Slider1.Value = sliders[3] / 65535f;
+                    deviceWrapper.Slider4.Value = sliders[3] / 65535f;
                 if (sliders.Count() > 4)
-                    deviceWrapper.Slider1.Value = sliders[4] / 65535f;
+                    deviceWrapper.Slider5.Value = sliders[4] / 65535f;
                 if (sliders.Count() > 5)
-                    deviceWrapper.Slider1.Value = sliders[5] / 65535f;
+                    deviceWrapper.Slider6.Value = sliders[5] / 65535f;
                 if (sliders.Count() > 6)
-                    deviceWrapper.Slider1.Value = sliders[6] / 65535f;
+                    deviceWrapper.Slider7.Value = sliders[6] / 65535f;
                 if (sliders.Count() > 7)
-                    deviceWrapper.Slider1.Value = sliders[7] / 65535f;
+                    deviceWrapper.Slider8.Value = sliders[7] / 65535f;
                 if (sliders.Count() > 8)
-                    deviceWrapper.Slider1.Value = sliders[8] / 65535f;
+                    deviceWrapper.Slider9.Value = sliders[8] / 65535f;
                 if (sliders.Count() > 9)
-                    deviceWrapper.Slider1.Value = sliders[9] / 65535f;
+                    deviceWrapper.Slider10.Value = sliders[9] / 65535f;
             }
         }
 
